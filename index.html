@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>1boon</title>
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <style>
+      .list {
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>1boon 콘텐츠</h1>
+
+      <div>
+        <ul class="nav nav-tabs">
+          <!-- 선택된탭:선택된 탭에 .active    -->
+          <li class="tab active">
+            <a title="recent" value="2" href="#">최근</a>
+          </li>
+          <li class="tab">
+            <a title="view" href="#">많이본</a>
+          </li>
+          <li class="tab">
+            <a title="popular" href="#">실시간인기</a>
+          </li>
+        </ul>
+      </div>
+      <div id="list">
+        <!-- 제목, 링크, 이미지, CP 를 표시해주세요  -->
+
+        <!-- 로딩마크업: 로딩중일때만 표시 -->
+        <!-- <div class="text-center">
+          <span class="glyphicon glyphicon-refresh"></span> 로딩중
+        </div> -->
+      </div>
+
+      <div class="text-center">
+        <button type="button" id="moreBtn">더보기</button>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
