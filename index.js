@@ -68,7 +68,8 @@ function getJSONFile(filename) {
       html += `<div class="img-warp"><img class="card-img-top" src="${key.img}" alt="Card image cap"></div>`;
       html += '<div class="card-body">';
       html += `<div class="card-title">${key.title}</div>`;
-      html += `<p class="card-cp">${key.cp}</p>`;
+      html += `<div class="card-url">${key.url}</div>`;
+      html += `<div class="card-cp">${key.cp}</div>`;
       html += "</div></div>";
     });
     list.innerHTML += html;
