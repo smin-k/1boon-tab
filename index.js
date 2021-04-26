@@ -46,6 +46,7 @@ function LoadAnimaiton() {
 }
 
 async function changeTab() {
+  for (n = 0; n < tab.length; n += 1) tab[n].classList.remove("active");
   await removeAllVisible();
   await LoadAnimaiton();
   moreBtn.style.display = "table-cell";
@@ -78,13 +79,11 @@ function getJSONFile(filename) {
 
 document.addEventListener("DOMContentLoaded", async () => {
   list.innerHTML += `<div id="loading"><img src="loading.gif" alt="Card image cap"></div>`;
-
   for (i = 0; i < tab.length; i += 1) {
     tab[i].addEventListener("click", (event) => {
-      for (n = 0; n < tab.length; n += 1) tab[n].classList.remove("active");
       event.target.parentElement.classList.add("active");
       currentActive = event.target.title;
-      changeTab();
+      changeTab(event);
     });
   }
 
