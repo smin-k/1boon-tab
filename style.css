@@ -2,13 +2,12 @@
   padding: 1%;
   display: flex;
   flex-wrap: wrap;
-  height: 800px;
 }
 
 .card {
   width: 18%;
   display: none;
-  height: 45%;
+  height: 350px;
   flex-direction: column;
   margin: 1%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

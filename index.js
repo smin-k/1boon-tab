@@ -11,6 +11,7 @@ let currentActive = "recent";
 
 // function get
 
+// 기본 사이즈 만큼 카드를 출력하는 함수
 function addSizeVisible() {
   const card = document.getElementsByClassName(`card ${currentActive}`);
   return Array.from(card)
@@ -20,6 +21,7 @@ function addSizeVisible() {
     });
 }
 
+// 보여지는 카드들을 전부 지우는 함수
 function removeAllVisible() {
   const rCard = document.getElementsByClassName(`visible`);
   return Array.from(rCard).forEach((element) => {
@@ -27,6 +29,7 @@ function removeAllVisible() {
   });
 }
 
+// 탭에 소속된 이미지를 전부 보여지게 하는 함수
 function addAllVisible() {
   const card = document.getElementsByClassName(`card ${currentActive}`);
   return Array.from(card).forEach((element) => {
@@ -34,25 +37,29 @@ function addAllVisible() {
   });
 }
 
+// 로딩 애니메이션을 보여주는 함수
 function LoadAnimaiton() {
   const loading = document.getElementById("loading");
+  moreBtn.style.display = "none";
   loading.classList.add("visible");
   return new Promise((resolve) =>
     setTimeout(() => {
       resolve();
       loading.classList.remove("visible");
+      moreBtn.style.display = "table-cell";
     }, 1000)
   );
 }
 
+// 탭 변경 함수
 async function changeTab() {
   for (n = 0; n < tab.length; n += 1) tab[n].classList.remove("active");
   await removeAllVisible();
   await LoadAnimaiton();
-  moreBtn.style.display = "table-cell";
   addSizeVisible();
 }
 
+// 더보기를 눌럿을 때 실행되는 함수
 async function viewAll() {
   await removeAllVisible();
   await LoadAnimaiton();
